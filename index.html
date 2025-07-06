@@ -4,23 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Navaneeth Kaku | Data Analyst Portfolio</title>
+
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body class="bg-gray-100 text-gray-900">
 
   <!-- Hero Section -->
   <header class="bg-blue-700 text-white py-10">
-    <div class="container mx-auto px-6 text-center">
+    <div class="container mx-auto px-6 text-center" data-aos="fade-down">
       <h1 class="text-4xl font-bold mb-2">Navaneeth Kaku</h1>
-      <img src="navaneeth.jpg" alt="Navaneeth Kaku" class="mx-auto rounded-full w-40 h-40 object-cover border-4 border-white shadow-md mb-4">
-      <p class="text-xl">Aspiring Data Analyst | Python • Excel • SQL</p>
-      <a href="Navaneeth_Resume.pdf" class="mt-4 inline-block bg-white text-blue-700 font-semibold py-2 px-4 rounded hover:bg-gray-200">Download Resume</a>
+      <img src="navaneeth.jpg" alt="Navaneeth Kaku" class="mx-auto rounded-full w-40 h-40 object-cover border-4 border-white shadow-md mb-4 transition-transform transform hover:scale-105">
+      <p class="text-xl">
+        <span id="typed-text"></span>
+      </p>
+      <a href="Navaneeth_Resume.pdf" class="mt-4 inline-block bg-white text-blue-700 font-semibold py-2 px-4 rounded hover:bg-gray-200 transition">Download Resume</a>
     </div>
   </header>
 
   <!-- About Me -->
   <section class="py-10">
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-6" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-4">About Me</h2>
       <p>
         I am a B.Tech Computer Science student at Garden City University (2026), with strong skills in data analysis, Python programming, Excel, and visualization. I have completed real-world project simulations involving e-commerce sales analysis and customer segmentation using RFM and dashboards.
@@ -31,12 +48,12 @@
   <!-- Projects -->
   <section class="py-10 bg-white">
     <div class="container mx-auto px-6">
-      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+      <h2 class="text-2xl font-semibold mb-4" data-aos="fade-right">Projects</h2>
 
       <!-- Netflix Project Card -->
-      <div class="mb-6">
+      <div class="mb-6" data-aos="zoom-in">
         <h3 class="text-xl font-bold">Netflix Data Analyst – Personal Project</h3>
-        <img src="assets/netflix.png" alt="Netflix Project Thumbnail" class="my-2 rounded shadow-md w-full max-w-md" />
+        <img src="assets/netflix.png" alt="Netflix Project Thumbnail" class="my-2 rounded shadow-md w-full max-w-md hover:scale-105 transition-transform duration-300" />
         <p>
           Cleaned and analyzed 6,000+ Netflix titles using Python, Pandas, Seaborn, and Matplotlib.
           Explored content types (Movies vs TV Shows), top genres, duration patterns, and content growth over the years.
@@ -47,9 +64,9 @@
       </div>
 
       <!-- E-Commerce Project Card -->
-      <div class="mb-6">
+      <div class="mb-6" data-aos="zoom-in">
         <h3 class="text-xl font-bold">E-Commerce Data Analyst – Personal Project</h3>
-        <img src="assets/ecommerce.png" alt="E-Commerce Project Thumbnail" class="my-2 rounded shadow-md w-full max-w-md" />
+        <img src="assets/ecommerce.png" alt="E-Commerce Project Thumbnail" class="my-2 rounded shadow-md w-full max-w-md hover:scale-105 transition-transform duration-300" />
         <p>
           Cleaned and analyzed 20,000+ records from an e-commerce dataset, focusing on monthly revenue analysis and product/country-wise sales insights. Performed customer segmentation using RFM and visualized trends with dashboards.
         </p>
@@ -57,22 +74,21 @@
         <a href="https://github.com/navaneethyadav/ecommerce-data-analysis" class="text-blue-600 underline text-sm mt-2 inline-block" target="_blank">🔗 View on GitHub</a>
       </div>
 
-      <!-- Weather Forecast App Project Card -->
-      <div class="mb-6">
+      <!-- Weather App -->
+      <div class="mb-6" data-aos="zoom-in">
         <h3 class="text-xl font-bold">Weather Forecast App – Android Project</h3>
-        <img src="assets/weather.jpg" alt="Weather Forecast Project Screenshot" class="my-2 rounded shadow-md w-full max-w-md" />
+        <img src="assets/weather.jpg" alt="Weather Forecast Project Screenshot" class="my-2 rounded shadow-md w-full max-w-md hover:scale-105 transition-transform duration-300" />
         <p>
           Developed an Android app using Java and Android Studio that fetches real-time weather data using the OpenWeatherMap API. The app features city-based weather search, temperature display, weather condition icons, and basic error handling.
         </p>
         <p class="text-sm mt-1"><strong>Tools:</strong> Java, Android Studio, OpenWeatherMap API</p>
         <a href="https://github.com/navaneethyadav/weather-forecast-app" class="text-blue-600 underline text-sm mt-2 inline-block" target="_blank">🔗 View on GitHub</a>
       </div>
-
     </div>
   </section>
 
   <!-- Certifications -->
-  <section class="py-10">
+  <section class="py-10" data-aos="fade-up">
     <div class="container mx-auto px-6">
       <h2 class="text-2xl font-semibold mb-4">Certifications</h2>
       <ul class="list-disc list-inside">
@@ -87,7 +103,7 @@
   </section>
 
   <!-- Contact -->
-  <footer class="bg-blue-700 text-white py-8">
+  <footer class="bg-blue-700 text-white py-8" data-aos="fade-up">
     <div class="container mx-auto px-6 text-center">
       <p>📫 navaneethkaku@gmail.com</p>
       <p>🔗 
@@ -98,6 +114,26 @@
     </div>
   </footer>
 
+  <!-- AOS JS Init -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <!-- Typed.js Init -->
+  <script>
+    new Typed('#typed-text', {
+      strings: ["Aspiring Data Analyst", "Python • Excel • SQL", "Portfolio by Navaneeth Kaku"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+
 </body>
 </html>
+
 
