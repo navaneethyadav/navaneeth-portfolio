@@ -2,16 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global custom styling */
+/* Custom global styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  body {
+    @apply bg-gray-100 text-gray-900;
+  }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
+  .dark body {
+    @apply bg-gray-900 text-white;
+  }
+
+  .typed-text {
+    font-weight: 600;
+    color: #facc15; /* yellow-400 */
+  }
 }
